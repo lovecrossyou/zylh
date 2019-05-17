@@ -42,9 +42,7 @@
 					<button type="primary">排队</button>
 					<button type="primary" @click="goannouncement">入厂公告</button>
 				</view>
-
 			</view>
-
 		</view>
 	</view>
 </template>
