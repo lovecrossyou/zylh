@@ -85,7 +85,7 @@
         }
         ,{
             "path" : "pages/modifyphone/modifyphone",
-            "style" : {}
+            "style" : {"navigationBarTitleText": "修改密码"}
         }
     ],
 	"tabBar": {
