@@ -1,45 +1,98 @@
 <template>
-	<view class="main">
-		<uni-list>
-			<uni-list-item title="语音设置"></uni-list-item>
-			<uni-list-item title="修改密码"></uni-list-item>
-
-			<uni-list-item title="常见问题"></uni-list-item>
-
-			<uni-list-item title="关于我们" @click="goabout"></uni-list-item>
-
-			<uni-list-item title="检测版本" note="v1.1.2"></uni-list-item>
-
-
-		</uni-list>
-	</view>
+  <view class="main">
+    <view class="person-head">
+      <cmd-avatar src="https://avatar.bbs.miui.com/images/noavatar_small.gif" @click="fnInfoWin" size="lg" :make="{'background-color': '#fff'}"></cmd-avatar>
+      <view class="person-head-box">
+        <view class="person-head-nickname">Slimmer</view>
+        <view class="person-head-username">ID：slimmer9501</view>
+      </view>
+    </view>
+    <view class="person-list">
+      <cmd-cell-item title="语音设置" slot-left arrow>
+        <cmd-icon type="bullet-list" size="24" color="#368dff"></cmd-icon>
+      </cmd-cell-item>
+      <cmd-cell-item title="修改密码" slot-left arrow>
+        <cmd-icon type="message" size="24" color="#368dff"></cmd-icon>
+      </cmd-cell-item>
+      <cmd-cell-item title="常见问题" slot-left arrow>
+        <cmd-icon type="settings" size="24" color="#368dff"></cmd-icon>
+      </cmd-cell-item>
+	  <cmd-cell-item title="关于我们" slot-left arrow @click="goabout">
+        <cmd-icon type="settings" size="24" color="#368dff"></cmd-icon>
+      </cmd-cell-item>
+      <cmd-cell-item title="检查版本" addon="v1.0" slot-left arrow>
+        <cmd-icon type="alert-circle" size="24" color="#368dff"></cmd-icon>
+      </cmd-cell-item>
+    </view>
+  </view>
 </template>
 
 <script>
-	import uniList from '@/components/uni-list/uni-list.vue'
-	import uniListItem from '@/components/uni-list-item/uni-list-item.vue'
-	export default {
-		components: {
-			uniList,
-			uniListItem
-		},
-		data() {
-			return {
+  import cmdAvatar from "@/components/cmd-avatar/cmd-avatar.vue"
+  import cmdIcon from "@/components/cmd-icon/cmd-icon.vue"
+  import cmdCellItem from "@/components/cmd-cell-item/cmd-cell-item.vue"
 
-			}
-		},
-		methods: {
-			goabout(){
-				uni.navigateTo({
-					url:"/pages/about/about"
-				})
-			}
-		}
-	}
+  export default {
+    components: {
+      cmdAvatar,
+      cmdCellItem,
+      cmdIcon
+    },
+    data() {
+      return {};
+    },
+    methods: {
+      /**
+       * 打开用户信息页
+       */
+      fnInfoWin() {
+        uni.navigateTo({
+          url: '/pages/user/info/info'
+        })
+      },
+	  goabout(){
+		  uni.navigateTo({
+          url: '/pages/about/about'
+        })
+	  }
+    }
+  }
 </script>
 
 <style>
-	.main {
+	.main{
 		width: 100%;
 	}
+  .person-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 150px;
+    padding-left: 20px;
+    background: linear-gradient(to right, #365fff, #36bbff);
+  }
+
+  .person-head-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+  }
+
+  .person-head-nickname {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .person-head-username {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .person-list {
+    line-height: 0;
+  }
 </style>

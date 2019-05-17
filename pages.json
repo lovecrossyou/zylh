@@ -55,7 +55,13 @@
 		}, {
 			"path": "pages/driver/me/me",
 			"style": {
-				"navigationBarTitleText": "我"
+				"navigationBarTitleText": "我",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
 			}
 		}, {
 			"path": "pages/announcement/announcement",
