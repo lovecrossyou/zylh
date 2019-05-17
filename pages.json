@@ -57,6 +57,17 @@
 			"style": {
 				"navigationBarTitleText": "我"
 			}
+		}, {
+			"path": "pages/announcement/announcement",
+			"style": {
+				"navigationBarTitleText": "入厂公告"
+			}
+		},
+		{
+			"path": "pages/announcement/detail",
+			"style": {
+				"navigationBarTitleText": "入厂公告"
+			}
 		}
 	],
 	"tabBar": {
