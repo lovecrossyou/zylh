@@ -114,6 +114,7 @@
 
 	.page_login {
 		padding: 10px;
+		width: 100%;
 	}
 
 	.head {
