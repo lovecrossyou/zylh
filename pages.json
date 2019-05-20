@@ -1,6 +1,18 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页,
 		{
+			"path": "pages/login/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		},
+		{
 			"path": "pages/driver/index/index",
 			"style": {
 				"navigationBarTitleText": "首页"
@@ -18,11 +30,6 @@
 				"navigationBarTitleText": "登录模板"
 			}
 		}, {
-			"path": "pages/login/login",
-			"style": {
-				"navigationBarTitleText": "登录"
-			}
-		}, {
 			"path": "pages/reg/reg",
 			"style": {
 				"navigationBarTitleText": "注册"
@@ -36,11 +43,6 @@
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "我的"
-			}
-		}, {
-			"path": "pages/driver/index/index",
-			"style": {
-				"navigationBarTitleText": "首页"
 			}
 		}, {
 			"path": "pages/driver/order/order",
@@ -74,20 +76,38 @@
 			"style": {
 				"navigationBarTitleText": "入厂公告"
 			}
+		}, {
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}, {
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		}, {
+			"path": "pages/modifyphone/modifyphone",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		}, {
+			"path": "pages/login/find-pwd/find-pwd",
+			"style": {
+				"navigationBarTitleText": "找回密码"
+			}
+		}, {
+			"path": "pages/login/reg/reg",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/login/reg-pwd/reg-pwd",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
 		}
-	    ,{
-            "path" : "pages/about/about",
-            "style" : {"navigationBarTitleText": "关于我们"}
-        }
-        ,{
-            "path" : "pages/setting/setting",
-            "style" : {"navigationBarTitleText": "设置"}
-        }
-        ,{
-            "path" : "pages/modifyphone/modifyphone",
-            "style" : {"navigationBarTitleText": "修改密码"}
-        }
-    ],
+	],
 	"tabBar": {
 		"color": "#7a7e83",
 		"selectedColor": "#0faeff",
